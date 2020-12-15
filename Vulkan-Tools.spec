@@ -4,7 +4,7 @@
 #
 Name     : Vulkan-Tools
 Version  : 1.2.162
-Release  : 37
+Release  : 38
 URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.2.162/Vulkan-Tools-1.2.162.tar.gz
 Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.2.162/Vulkan-Tools-1.2.162.tar.gz
 Summary  : No detailed summary available
