@@ -4,7 +4,6 @@ cmake
 gst-plugins-bad
 librealsense
 mesa
-mxnet
 obs-studio
 qt6base
 qtbase
