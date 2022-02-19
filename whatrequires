@@ -3,6 +3,8 @@ Vulkan-Tools
 cmake
 gst-plugins-bad
 librealsense
+llvm
+llvm12
 mesa
 obs-studio
 qt6base
