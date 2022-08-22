@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 Vulkan-Tools
-cmake
 gst-plugins-bad
 librealsense
 llvm
