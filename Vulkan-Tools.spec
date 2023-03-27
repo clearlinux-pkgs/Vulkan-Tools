@@ -4,13 +4,13 @@
 # Using build pattern: cmake
 #
 Name     : Vulkan-Tools
-Version  : 1.3.244
-Release  : 107
-URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.244/Vulkan-Tools-1.3.244.tar.gz
-Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.244/Vulkan-Tools-1.3.244.tar.gz
+Version  : 1.3.245
+Release  : 108
+URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.245/Vulkan-Tools-1.3.245.tar.gz
+Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.245/Vulkan-Tools-1.3.245.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : Apache-2.0 MIT
+License  : Apache-2.0
 Requires: Vulkan-Tools-bin = %{version}-%{release}
 Requires: Vulkan-Tools-license = %{version}-%{release}
 BuildRequires : Vulkan-Headers-data
@@ -58,15 +58,15 @@ license components for the Vulkan-Tools package.
 
 
 %prep
-%setup -q -n Vulkan-Tools-1.3.244
-cd %{_builddir}/Vulkan-Tools-1.3.244
+%setup -q -n Vulkan-Tools-1.3.245
+cd %{_builddir}/Vulkan-Tools-1.3.245
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679591521
+export SOURCE_DATE_EPOCH=1679944036
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -84,11 +84,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1679591521
+export SOURCE_DATE_EPOCH=1679944036
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Vulkan-Tools
 cp %{_builddir}/Vulkan-Tools-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/Vulkan-Tools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
-cp %{_builddir}/Vulkan-Tools-%{version}/windows-runtime-installer/VulkanRT-License.txt %{buildroot}/usr/share/package-licenses/Vulkan-Tools/84fbabc68c29007b8b7762962b0bba1137648f5e || :
 pushd clr-build
 %make_install
 popd
@@ -106,4 +105,3 @@ popd
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/Vulkan-Tools/2b8b815229aa8a61e483fb4ba0588b8b6c491890
-/usr/share/package-licenses/Vulkan-Tools/84fbabc68c29007b8b7762962b0bba1137648f5e
