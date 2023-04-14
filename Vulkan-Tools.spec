@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : Vulkan-Tools
-Version  : 1.3.246
-Release  : 109
-URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.246/Vulkan-Tools-1.3.246.tar.gz
-Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.246/Vulkan-Tools-1.3.246.tar.gz
+Version  : 1.3.247
+Release  : 110
+URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.247/Vulkan-Tools-1.3.247.tar.gz
+Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.247/Vulkan-Tools-1.3.247.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -58,15 +58,15 @@ license components for the Vulkan-Tools package.
 
 
 %prep
-%setup -q -n Vulkan-Tools-1.3.246
-cd %{_builddir}/Vulkan-Tools-1.3.246
+%setup -q -n Vulkan-Tools-1.3.247
+cd %{_builddir}/Vulkan-Tools-1.3.247
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680537615
+export SOURCE_DATE_EPOCH=1681496263
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -84,7 +84,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1680537615
+export SOURCE_DATE_EPOCH=1681496263
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Vulkan-Tools
 cp %{_builddir}/Vulkan-Tools-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/Vulkan-Tools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :

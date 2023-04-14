@@ -4,8 +4,8 @@ gst-plugins-bad
 librealsense
 llvm
 llvm12
-llvm13
 llvm14
+llvm15
 mesa
 obs-studio
 qt6base
