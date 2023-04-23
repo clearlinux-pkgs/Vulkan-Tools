@@ -8,6 +8,7 @@ llvm14
 llvm15
 mesa
 obs-studio
+qcoro
 qt6base
 qtbase
 qttools
