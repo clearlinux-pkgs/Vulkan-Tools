@@ -10,5 +10,6 @@ mesa
 obs-studio
 qcoro
 qt6base
+qt6tools
 qtbase
 qttools
