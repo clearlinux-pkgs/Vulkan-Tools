@@ -1,9 +1,9 @@
 # This file contains recursive sources that require this package
 Vulkan-Tools
+blender
 gst-plugins-bad
 librealsense
 llvm
-llvm12
 llvm14
 llvm15
 mesa

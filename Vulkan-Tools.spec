@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : Vulkan-Tools
-Version  : 1.3.254
-Release  : 116
-URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.254/Vulkan-Tools-1.3.254.tar.gz
-Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.254/Vulkan-Tools-1.3.254.tar.gz
+Version  : 1.3.265
+Release  : 117
+URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.265/Vulkan-Tools-1.3.265.tar.gz
+Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.265/Vulkan-Tools-1.3.265.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -15,13 +15,13 @@ Requires: Vulkan-Tools-bin = %{version}-%{release}
 Requires: Vulkan-Tools-license = %{version}-%{release}
 BuildRequires : Vulkan-Headers-data
 BuildRequires : Vulkan-Headers-dev
-BuildRequires : Vulkan-Headers-dev Vulkan-Loader-dev Vulkan-Tools
 BuildRequires : Vulkan-Loader-dev
 BuildRequires : buildreq-cmake
 BuildRequires : extra-cmake-modules pkgconfig(wayland-client)
 BuildRequires : extra-cmake-modules wayland
 BuildRequires : glslang-bin
 BuildRequires : glslang-dev
+BuildRequires : googletest-dev
 BuildRequires : pkg-config
 BuildRequires : pkgconfig(wayland-client)
 BuildRequires : pkgconfig(wayland-cursor)
@@ -58,15 +58,15 @@ license components for the Vulkan-Tools package.
 
 
 %prep
-%setup -q -n Vulkan-Tools-1.3.254
-cd %{_builddir}/Vulkan-Tools-1.3.254
+%setup -q -n Vulkan-Tools-1.3.265
+cd %{_builddir}/Vulkan-Tools-1.3.265
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1687201928
+export SOURCE_DATE_EPOCH=1695769905
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -103,7 +103,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1687201928
+export SOURCE_DATE_EPOCH=1695769905
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Vulkan-Tools
 cp %{_builddir}/Vulkan-Tools-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/Vulkan-Tools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
