@@ -8,7 +8,9 @@ llvm15
 mesa
 obs-studio
 qcoro
+qt63d
 qt6base
 qt6tools
+qt6webengine
 qtbase
 qttools
