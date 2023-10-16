@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : Vulkan-Tools
-Version  : 1.3.267
-Release  : 119
-URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.267/Vulkan-Tools-1.3.267.tar.gz
-Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.267/Vulkan-Tools-1.3.267.tar.gz
+Version  : 1.3.268
+Release  : 120
+URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.268/Vulkan-Tools-1.3.268.tar.gz
+Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.268/Vulkan-Tools-1.3.268.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -17,18 +17,11 @@ BuildRequires : Vulkan-Headers-data
 BuildRequires : Vulkan-Headers-dev
 BuildRequires : Vulkan-Loader-dev
 BuildRequires : buildreq-cmake
-BuildRequires : extra-cmake-modules pkgconfig(wayland-client)
-BuildRequires : extra-cmake-modules wayland
 BuildRequires : glslang-bin
 BuildRequires : glslang-dev
 BuildRequires : googletest-dev
 BuildRequires : pkg-config
 BuildRequires : pkgconfig(wayland-client)
-BuildRequires : pkgconfig(wayland-cursor)
-BuildRequires : pkgconfig(wayland-egl)
-BuildRequires : pkgconfig(wayland-protocols)
-BuildRequires : pkgconfig(wayland-scanner)
-BuildRequires : pkgconfig(wayland-server)
 BuildRequires : pkgconfig(x11)
 BuildRequires : pkgconfig(xcb)
 BuildRequires : python3-dev
@@ -58,15 +51,15 @@ license components for the Vulkan-Tools package.
 
 
 %prep
-%setup -q -n Vulkan-Tools-1.3.267
-cd %{_builddir}/Vulkan-Tools-1.3.267
+%setup -q -n Vulkan-Tools-1.3.268
+cd %{_builddir}/Vulkan-Tools-1.3.268
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696630605
+export SOURCE_DATE_EPOCH=1697477178
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -129,7 +122,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696630605
+export SOURCE_DATE_EPOCH=1697477178
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Vulkan-Tools
 cp %{_builddir}/Vulkan-Tools-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/Vulkan-Tools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
@@ -148,11 +141,9 @@ popd
 %files bin
 %defattr(-,root,root,-)
 /V3/usr/bin/vkcube
-/V3/usr/bin/vkcube-wayland
 /V3/usr/bin/vkcubepp
 /V3/usr/bin/vulkaninfo
 /usr/bin/vkcube
-/usr/bin/vkcube-wayland
 /usr/bin/vkcubepp
 /usr/bin/vulkaninfo
 
