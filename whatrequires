@@ -1,12 +1,10 @@
 # This file contains recursive sources that require this package
-blender
 gst-plugins-bad
 librealsense
 llvm
 llvm14
 llvm15
 mesa
-obs-studio
 qcoro
 qt63d
 qt6base
