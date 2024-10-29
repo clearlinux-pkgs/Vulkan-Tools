@@ -7,7 +7,7 @@
 #
 Name     : Vulkan-Tools
 Version  : 1.3.270
-Release  : 122
+Release  : 123
 URL      : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.270/Vulkan-Tools-1.3.270.tar.gz
 Source0  : https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.270/Vulkan-Tools-1.3.270.tar.gz
 Summary  : No detailed summary available
