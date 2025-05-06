@@ -1,11 +1,20 @@
 # This file contains recursive sources that require this package
+blender
+dpcpp-compiler
 gst-plugins-bad
 librealsense
 llvm
 llvm14
 llvm15
+llvm16
+llvm17
+llvm18
+llvm19
 mesa
+mesa-clc
+obs-studio
 qcoro
+qcoro6
 qt63d
 qt6base
 qt6tools

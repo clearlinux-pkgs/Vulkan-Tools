@@ -5,3 +5,5 @@ Vulkan-Headers-data
 Vulkan-Loader-dev
 glslang-bin
 glslang-dev
+volk
+volk-dev
