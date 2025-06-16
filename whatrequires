@@ -3,6 +3,7 @@ blender
 dpcpp-compiler
 gst-plugins-bad
 librealsense
+llama.cpp
 llvm
 llvm14
 llvm15
